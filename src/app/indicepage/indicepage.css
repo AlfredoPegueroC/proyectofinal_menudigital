@@ -1,0 +1,58 @@
+.indice_container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 10rem;
+}
+
+.sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: var(--main-color);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+.title {
+  margin-top: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  line-height: 0.99;
+  color: hsl(39, 42%, 91%);
+  max-width: 40rem;
+}
+
+.description {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  max-width: 32rem;
+  margin-top: -0.8rem;
+}
+.default_indice {
+  margin-top: -1.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+}
+
+.default_indice a {
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+.default_indice span {
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--linkcard-background-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+}
+.default_indice span:hover{
+  background-color: var(--main-color);
+  color: var(--linkcard-background-color);
+  transition: all 0.3s ease-in-out;
+}

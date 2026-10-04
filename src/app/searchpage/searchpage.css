@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   padding: 4rem 10rem;
-  outline: 1px solid red;
 }
 .sub{
   font-family: 'jost', serif;
@@ -78,8 +77,12 @@
   padding: 0.5rem 1rem;
   border-radius: 5rem;
 }
-.btn:hover, .default_search span:hover{
+.default_search span:hover{
   background-color: var(--main-color);
   color: var(--linkcard-background-color);
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+  background-color: var(--highlight-color);
   transition: all 0.3s ease-in-out;
 }

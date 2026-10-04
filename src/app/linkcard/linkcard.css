@@ -36,3 +36,7 @@
   margin-top: 2rem;
 
 }
+.linkcard_link:hover{
+  color: var(--highlight-color);
+  transition: all 0.3s ease-in-out;
+}

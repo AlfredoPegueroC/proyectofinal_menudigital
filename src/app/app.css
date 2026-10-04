@@ -1,0 +1,16 @@
+.container {
+  min-height: 100vh;
+  min-height: 100svh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  display: flex;
+  flex: 1;
+}
+.message{
+  padding: 2rem 4rem;
+  font-weight: 1.125rem;
+  
+}

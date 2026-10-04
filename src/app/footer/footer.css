@@ -1,0 +1,21 @@
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  background-color: var(--navbar-color);
+  margin-top: auto;
+  border-top: 1px solid var(--navbar-line);
+}
+
+.footer .logo{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: var(--navbar-line);
+}
+.footer p{
+  color: white;
+  font-family: 'Jost', serif;
+}

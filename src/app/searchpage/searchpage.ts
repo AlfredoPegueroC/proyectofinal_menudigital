@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import {Card} from '../card/card';
 
 @Component({
-  imports: [],
+  imports: [Card],
   selector: 'app-searchpage',
   styleUrl: './searchpage.css',
   templateUrl: './searchpage.html',

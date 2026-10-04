@@ -1,1 +1,14 @@
-<p>card works!</p>
+<div class="card_container">
+  <div class="card_content">
+    <img
+      class="card_image"
+      src="{{ image }}"
+      alt="Imagen del platillo"
+    />
+    <h2 class="card_title">{{ title }}</h2>
+  </div>
+  <div class="card_footer">
+    <p class="card_description">{{ description }}</p>
+    <span class="card_cuisine">{{ cuisine }}</span>
+  </div>
+</div>

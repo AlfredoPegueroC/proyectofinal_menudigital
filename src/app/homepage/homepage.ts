@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { Linkcard } from '../linkcard/linkcard';
 
 @Component({
-  imports: [],
+  imports: [Linkcard],
   selector: 'app-homepage',
   styleUrl: './homepage.css',
   templateUrl: './homepage.html',

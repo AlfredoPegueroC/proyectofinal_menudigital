@@ -35,3 +35,8 @@
   max-width: 32rem;
   margin-top: -0.8rem;
 }
+.linkcards_container{
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}

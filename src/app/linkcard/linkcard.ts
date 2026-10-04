@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   imports: [],
@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './linkcard.css',
   templateUrl: './linkcard.html',
 })
-export class Linkcard {}
+export class Linkcard {
+  @Input() title: string = '';
+  @Input() subtitle: string = '';
+  @Input() description: string = '';
+  @Input() linkText: string = '';
+}

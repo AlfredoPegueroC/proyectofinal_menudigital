@@ -9,9 +9,10 @@
   --background-color: hsl(40, 16%, 4%);
   --text-color: hsl(39, 11%, 70%);
   --navbar-color: hsl(30, 10%, 4%);
-  --navbar-line: hsla(42, 50%, 52%);
+  --navbar-line: hsl(42, 39%, 12%);
   --main-color: hsl(42, 50%, 52%);
   --highlight-color: hsl(44, 70%, 68%);
+  --linkcard-background-color: hsl(30, 11%, 7%);
 }
 
 * {

@@ -26,3 +26,7 @@
   font-family: 'Jost', sans-serif;
   transform: uppercase;
 }
+.nav-link:hover{
+  color: var(--main-color);
+  transition: all 0.3s ease-in-out;
+}

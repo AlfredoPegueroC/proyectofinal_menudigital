@@ -7,7 +7,7 @@
   border: 1px solid var(--navbar-line);
 }
 .linkcard_subtitle{
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'jost', serif;
   font-size: 1.25rem;
   color: var(--main-color);
   text-transform: uppercase;

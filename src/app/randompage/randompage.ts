@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { Meal } from '../service/meal';
+
 @Component({
   imports: [],
   selector: 'app-randompage',
@@ -7,29 +8,28 @@ import { Meal } from '../service/meal';
   templateUrl: './randompage.html',
 })
 export class Randompage implements OnInit {
-  meal: any = null;
-  ingredientes: any[] = [];
+  meal = signal<any>(null);
+  ingredientes = signal<any[]>([]);
 
   constructor(private MealService: Meal) {}
+
   busquedaAleatoria(): void {
-    this.MealService.buscarAleatorio().subscribe((data) => {
-      this.meal = data.meals[0];
+    this.MealService.buscarAleatorio().subscribe({
+      next: (data) => {
+        const meal = data.meals[0];
+        const lista: any[] = [];
 
-      this.ingredientes = [];
-
-      for (let i = 1; i <= 20; i++) {
-        const ingrediente = this.meal[`strIngredient${i}`];
-        const medida = this.meal[`strMeasure${i}`];
-
-        if (ingrediente) {
-          this.ingredientes.push({
-            nombre: ingrediente,
-            medida: medida,
-          });
+        for (let i = 1; i <= 20; i++) {
+          const nombre = meal[`strIngredient${i}`];
+          if (nombre) {
+            lista.push({ nombre, medida: meal[`strMeasure${i}`] });
+          }
         }
-      }
 
-      console.log(data.meals[0]);
+        this.meal.set(meal);
+        this.ingredientes.set(lista);
+      },
+      error: (err) => console.error('Error:', err),
     });
   }
 

@@ -6,7 +6,7 @@
 }
 
 .sub {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'jost', serif;
   font-size: 1rem;
   color: var(--main-color);
   text-transform: uppercase;
@@ -55,4 +55,12 @@
   background-color: var(--main-color);
   color: var(--linkcard-background-color);
   transition: all 0.3s ease-in-out;
+}
+.default_indice span.activa {
+  background-color: var(--main-color);
+  color: var(--linkcard-background-color);
+}
+
+.default_indice span.activa a {
+  color: var(--linkcard-background-color);
 }

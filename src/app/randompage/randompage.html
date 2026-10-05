@@ -10,20 +10,20 @@
   </div>
 
   <div class="random_content">
-    @if (meal) {
+    @if (meal(); as m) {
       <div class="left">
-        <img [src]="meal.strMealThumb" [alt]="meal.strMeal" class="img" />
+        <img [src]="m.strMealThumb" [alt]="m.strMeal" class="img" />
       </div>
 
       <div class="right">
         <div class="top">
           <div class="info">
-            <span class="category">{{ meal.strCategory }}</span>
-            <span class="country">{{ meal.strCountry }}</span>
+            <span class="category">{{ m.strCategory }}</span>
+            <span class="country">{{ m.strArea }}</span>
           </div>
           <div class="name">
             <h1 class="meal_name">
-              {{ meal.strMeal }}
+              {{ m.strMeal }}
             </h1>
           </div>
 
@@ -31,13 +31,13 @@
             <div class="ingredientes">
               <h2>Ingredientes</h2>
 
-              @for (item of ingredientes; track item.nombre) {
+              @for (item of ingredientes(); track item.nombre) {
                 <p><span>─</span> {{ item.nombre }} ─ {{ item.medida }}</p>
               }
             </div>
 
-            @if(meal.strYoutube){
-              <a href="{{meal.strYoutube}}" target="_blank" class="link">Ver video de preparacion  →</a>
+            @if (m.strYoutube) {
+              <a [href]="m.strYoutube" target="_blank" class="link">Ver video de preparacion →</a>
             }
           </div>
         </div>

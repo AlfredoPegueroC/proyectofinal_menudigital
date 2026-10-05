@@ -17,7 +17,7 @@
   </div>
 
   <div class="api_content">
-    @for (meal of meals; track meal.idMeal) {
+    @for (meal of meals(); track meal.idMeal) {
       <app-card
         [title]="meal.strCategory"
         [image]="meal.strMealThumb"

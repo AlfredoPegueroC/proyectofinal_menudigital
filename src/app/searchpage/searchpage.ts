@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { Card } from '../card/card';
 import { Meal } from '../service/meal';
 
@@ -9,20 +9,18 @@ import { Meal } from '../service/meal';
   templateUrl: './searchpage.html',
 })
 export class Searchpage implements OnInit {
-  // private mealService = inject(Meal);
+  meals = signal<any[]>([]);
 
-  meals: any[] = [];
-
-  constructor(private mealService : Meal){}
+  constructor(private mealService: Meal) {}
 
   buscar(nombre: string): void {
-    this.mealService.buscarPlatillo(nombre).subscribe((data) => {
-      this.meals = data.meals ?? [];
-      console.log(data)
+    this.mealService.buscarPlatillo(nombre).subscribe({
+      next: (data) => this.meals.set(data.meals ?? []),
+      error: (err) => console.error('Error:', err),
     });
   }
 
   ngOnInit(): void {
-    this.buscar("salad");
+    this.buscar('salad');
   }
 }

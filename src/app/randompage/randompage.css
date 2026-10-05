@@ -20,10 +20,10 @@
   color: hsl(39, 42%, 91%);
   max-width: 40rem;
 }
-.highlight{
+.highlight {
   color: var(--highlight-color);
 }
-.btn{
+.btn {
   padding: 1rem 2rem;
   font-size: 1.2rem;
   border-radius: 5rem;
@@ -35,13 +35,85 @@
   letter-spacing: 0.1rem;
   cursor: pointer;
 }
-.btn:hover{
+.btn:hover {
   background-color: var(--highlight-color);
   transition: all 0.3s ease-in-out;
 }
-.random_image{
+.random_image {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: -3.2rem;
+}
+.img {
+  border-radius: 20px;
+  max-width: 100%;
+  width: 600px;
+  height: 500px;
+}
+.top {
+  margin-top: 0.3rem;
+}
+.random_content {
+  display: flex;
+  gap: 4rem;
+}
+.info {
+  display: flex;
+  gap: 1rem;
+}
+.category,
+.country {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.8rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1;
+  font-family: 'jost ', serif;
+}
+.category {
+  outline: 1px solid var(--highlight-color);
+  color: var(--highlight-color);
+  background-color: hsla(44, 71%, 68%, 0.1);
+}
+.country {
+  outline: 1px solid var(--text-color);
+  color: var(--text-color);
+  background-color: hsla(39, 11%, 70%, 0.1);
+}
+.meal_name {
+  color: hsl(41, 28%, 86%);
+  font-family: 'CormorGaramondant ', serif;
+  margin-top: 2rem;
+  font-size: 5rem;
+}
+.ingredientes{
+  margin-bottom: 2rem;
+}
+.ingredientes h2 {
+  color: var(--main-color);
+  font-family: 'Jost', sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.ingredientes p {
+  color: hsl(41, 28%, 86%);
+  font-family: 'Jost', sans-serif;
+  font-size: 1.125rem;
+}
+.ingredientes p span {
+  color: var(--main-color);
+}
+
+.link {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  color: var(--main-color);
+  text-decoration: underline;
+  margin-top: 2rem;
+  text-decoration: none;
+}
+.link:hover {
+  color: var(--highlight-color);
+  transition: all 0.3s ease-in-out;
 }

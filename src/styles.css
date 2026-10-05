@@ -2,10 +2,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap'); /* Titulos y logo*/
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap'); /* TODO LO DEMAS */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');/* TODO LO DEMAS */
-
-:root{
+:root {
   --background-color: hsl(40, 16%, 4%);
   --text-color: hsl(39, 11%, 70%);
   --navbar-color: hsl(30, 10%, 4%);
@@ -35,6 +34,11 @@ body {
   min-height: 100dvh;
   background-color: var(--background-color);
 }
+@media (max-width: 1440px) {
+  body {
+    zoom: 80%;
+  }
+}
 h1,
 h2,
 h3,
@@ -56,9 +60,9 @@ a {
   font-size: 1.5rem;
   font-weight: bold;
 }
-.api_content{
+.api_content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
   grid-auto-rows: auto;
   gap: 2rem;
 }

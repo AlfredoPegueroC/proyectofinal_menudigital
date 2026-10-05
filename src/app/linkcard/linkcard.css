@@ -1,34 +1,40 @@
-.linkcard{
+.linkcard {
   background-color: var(--linkcard-background-color);
   border-radius: 1rem;
   width: 100%;
   padding: 3rem;
   box-sizing: border-box;
   border: 1px solid var(--navbar-line);
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
-.linkcard_subtitle{
+.linkcard:hover {
+  transform: translateY(-5px);
+}
+.linkcard_subtitle {
   font-family: 'jost', serif;
   font-size: 1.25rem;
   color: var(--main-color);
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
-.linkcard_title{
+
+.linkcard_title {
   margin-top: 10px;
   font-family: 'Cormorant Garamond', serif;
   font-size: 2rem;
   max-width: 40rem;
-  line-height: .99;
+  line-height: 0.99;
   color: hsl(39, 42%, 91%);
 }
-.linkcard_description{
+.linkcard_description {
   font-family: 'Jost', sans-serif;
   font-size: 1.125rem;
   color: var(--text-color);
   max-width: 32rem;
   margin-top: -0.8rem;
 }
-.linkcard_link{
+.linkcard_link {
   font-family: 'Jost', sans-serif;
   font-size: 1.1rem;
   color: var(--main-color);
@@ -36,7 +42,7 @@
   margin-top: 2rem;
   text-decoration: none;
 }
-.linkcard_link:hover{
+.linkcard_link:hover {
   color: var(--highlight-color);
   transition: all 0.3s ease-in-out;
 }

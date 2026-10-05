@@ -19,3 +19,8 @@
   color: white;
   font-family: 'Jost', serif;
 }
+@media (max-width: 1440px){
+  .footer{
+    margin-top: 7rem;
+  }
+}

@@ -1,8 +1,10 @@
-<div class="linkcard">
-  <div class="linkcard_content">
-    <span class="linkcard_subtitle">{{ subtitle }}</span>
-    <h2 class="linkcard_title">{{ title }}</h2>
-    <p class="linkcard_description">{{ description }}</p>
-    <a routerLink="{{ linkTo }}" class="linkcard_link">{{ linkText }}</a>
-  </div>
+<div class="linkcard" routerLink="{{linkTo}}">
+ 
+    <div class="linkcard_content">
+      <span class="linkcard_subtitle">{{ subtitle }}</span>
+      <h2 class="linkcard_title">{{ title }}</h2>
+      <p class="linkcard_description">{{ description }}</p>
+      <a routerLink="{{ linkTo }}" class="linkcard_link">{{ linkText }}</a>
+    </div>
+ 
 </div>

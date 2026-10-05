@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Meal } from '../service/meal';
 @Component({
   imports: [],
@@ -6,17 +6,34 @@ import { Meal } from '../service/meal';
   styleUrl: './randompage.css',
   templateUrl: './randompage.html',
 })
-export class Randompage {
-  private MealService = inject(Meal);
+export class Randompage implements OnInit {
+  meal: any = null;
+  ingredientes: any[] = [];
 
-  meals: any[] = [];
+  constructor(private MealService: Meal) {}
+  busquedaAleatoria(): void {
+    this.MealService.buscarAleatorio().subscribe((data) => {
+      this.meal = data.meals[0];
 
+      this.ingredientes = [];
 
-  busquedaAleatoria(): void{
-    this.MealService.buscarAleatorio().subscribe((data) =>{
-      this.meals = data.meals ?? [];
+      for (let i = 1; i <= 20; i++) {
+        const ingrediente = this.meal[`strIngredient${i}`];
+        const medida = this.meal[`strMeasure${i}`];
 
-      console.log(data);
-    })
+        if (ingrediente) {
+          this.ingredientes.push({
+            nombre: ingrediente,
+            medida: medida,
+          });
+        }
+      }
+
+      console.log(data.meals[0]);
+    });
+  }
+
+  ngOnInit(): void {
+    this.busquedaAleatoria();
   }
 }

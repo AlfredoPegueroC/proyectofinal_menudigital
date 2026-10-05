@@ -19,7 +19,9 @@
         <div class="top">
           <div class="info">
             <span class="category">{{ m.strCategory }}</span>
-            <span class="country">{{ m.strArea }}</span>
+            @if (m.strArea) {
+              <span class="country">{{ m.strArea }}</span>
+            }
           </div>
           <div class="name">
             <h1 class="meal_name">

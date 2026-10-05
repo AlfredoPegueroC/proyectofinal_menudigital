@@ -34,7 +34,7 @@
   color: var(--main-color);
   text-decoration: underline;
   margin-top: 2rem;
-
+  text-decoration: none;
 }
 .linkcard_link:hover{
   color: var(--highlight-color);

@@ -56,3 +56,9 @@ a {
   font-size: 1.5rem;
   font-weight: bold;
 }
+.api_content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+  grid-auto-rows: auto;
+  gap: 2rem;
+}

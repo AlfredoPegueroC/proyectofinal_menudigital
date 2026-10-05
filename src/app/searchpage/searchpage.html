@@ -2,29 +2,28 @@
   <div class="Buscador">
     <span class="sub">01 - POR NOMBRE</span>
     <h1 class="title">Busca un <span class="highlight">platillo</span></h1>
-    <p class="description">
-      Escribe el nombre de un platillo y te lo muestro
-    </p>
+    <p class="description">Escribe el nombre de un platillo y te lo muestro</p>
 
     <div class="buscar_input">
-      <input type="text" placeholder="Escribe el nombre del platillo..." />
-      <button class="btn">Buscar</button>
+      <input type="text" placeholder="Escribe el nombre del platillo..." #buscarInput />
+      <button class="btn" (click)="buscar(buscarInput.value)">Buscar</button>
     </div>
     <div class="default_search">
-      <span>Arrabiata</span>
-      <span>Salad</span>
-      <span>Cake</span>
-      <span>Soup</span>
+      <span (click)="buscar('Arrabiata')">Arrabiata</span>
+      <span (click)="buscar('Salad')">Salad</span>
+      <span (click)="buscar('Cake')">Cake</span>
+      <span (click)="buscar('Soup')">Soup</span>
     </div>
   </div>
 
-  <div class="buscar_content">
-    <app-card title="Arrabiata" image="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" description="Pasta con salsa de tomate picante y ajo." cuisine="Italian" />
-    <app-card title="Arrabiata" image="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" description="Pasta con salsa de tomate picante y ajo." cuisine="Italian" />
-    <app-card title="Arrabiata" image="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" description="Pasta con salsa de tomate picante y ajo." cuisine="Italian" />
-    <app-card title="Arrabiata" image="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" description="Pasta con salsa de tomate picante y ajo." cuisine="Italian" />
-    <app-card title="Arrabiata" image="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" description="Pasta con salsa de tomate picante y ajo." cuisine="Italian" />
-    
+  <div class="api_content">
+    @for (meal of meals; track meal.idMeal) {
+      <app-card
+        [title]="meal.strCategory"
+        [image]="meal.strMealThumb"
+        [description]="meal.strMeal"
+        [cuisine]="meal.strCountry"
+      />
+    }
   </div>
-  
 </section>

@@ -8,6 +8,12 @@
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+
+@media (max-width: 1440px){
+  .linkcard{
+    width: 450px ;
+  }
+}
 .linkcard:hover {
   transform: translateY(-5px);
 }
